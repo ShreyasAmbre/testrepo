@@ -1,0 +1,51 @@
+***************************************************Libp2p Documentation************************************************ 
+
+WHat is libp2p
+-> is a modular system of protocols, specifications and libraries that enable the development of peer-to-peer network applications.
+
+Peer to peer basic
+-> A peer-to-peer network is one in which the participants (referred to as peers or nodes) communicate with one another directly, on more or less “equal footing”. This does not necessarily mean that all peers are identical; some may have different roles in the overall network. However, one of the defining characteristics of a peer-to-peer network is that they do not require a priviliged set of “servers” which behave completely differently from their “clients”
+
+Circuit Relay ? (Aslo see github description for details)
+A means of establishing communication between peers who are unable to communicate directly, with the assistance of a third peer willing and able to act as an intermediary.
+n many real-world peer-to-peer networks, direct communication between all peers may be impossible for a variety of reasons. For example, one or more peers may be behind a firewall or have NAT traversal issues. 
+In such cases, it’s possible to “bridge the gap” between peers, so long as each of them are capable of establishing a connection to a willing relay peer. If I only speak TCP and you only speak websockets, we can still hang out with the help of a bilingual pal.
+Circuit relay is implemented in libp2p according to the relay spec, which defines a wire protocol and addressing scheme for relayed connections.
+
+Client Server Architecture 
+A network architecture defined by the presence of central “server” programs which provide services and resources to a (usually much larger) set of “client” programs. Typically clients do not communicate directly with one another, instead routing all communications through the server, which is inherently the most privileged member of the network.
+
+What problems can libp2p solve? 
+
+Transport :- 
+At the foundation of libp2p is the transport layer, which is responsible for the actual transmission and receipt of data from one peer to another. 
+libp2p provides a simple network interface that can be adapted to support existing and future protocols, 
+allowing libp2p applications to operate in many different runtime and networking environments. 
+A libp2p transport is understood as something that offers a dial and listen interface.
+
+Identity :- 
+In a world with billions of networked devices, knowing who you’re talking to is key to secure and reliable communication.
+libp2p uses public key cryptography as the basis of peer identity, which serves two complementary purposes. First, it gives each peer a globally unique “name”, in the form of a PeerId. Second, the PeerId allows anyone to retrieve the public key for the identified peer, which enables secure communication between peers.
+
+Public Key Cryptography (Asymetric Cryptography)
+-> In this we use 2 keys, Pulic key for encryption of msg and private key for decryption of msg
+-> Public key of every nodes is known to every one in network which is help fpr encryption
+-> But encrypted msg will get decrypted using private key only which every nodes as that wihtin themself. Its not known by any other node in network
+-
+
+Security
+-> As we use public key cryptography to identify the authenticated peer in the network to give a unique name known as peerid in network
+-> similarly transport interface of libp2p support multiple  methods of encrypting communication.
+
+peer routing ?
+When you want to send a message to another peer, you need two key pieces of information
+1. Peer id, 
+2. way to locate that node in the network to open the connection for communication 
+There are many cases where we only have the PeerId for the peer we want to contact, and we need a way to discover their network address. Peer routing is the process of discovering peer addresses by leveraging the knowledge of other peers.
+In a peer routing system, a peer can either give us the address we need if they have it, or else send our inquiry to another peer who’s more likely to have the answer. 
+Current stable implementation is done used DHT distributed Hash Table
+
+DHT ?
+-> 
+
+

@@ -1,0 +1,15 @@
+Official Python Documentation :- https://docs.python.org/3/
+Official Apache Cassandra Documentation  :- https://cassandra.apache.org/
+Official Cassandra Driver Documentation :- https://docs.datastax.com/en/developer/python-driver/3.24/
+Official Flask Documentation :- https://flask.palletsprojects.com/en/1.1.x/
+Official Flask Rest API Documentation :- https://flask-restful.readthedocs.io/en/latest/
+
+Some Other Documentation for Better Understanding 
+Python Documentation :- https://www.w3schools.com/python/
+Cassandra Documentation :- https://www.tutorialspoint.com/cassandra/cassandra_introduction.htm
+
+Some Video Guidance :- 
+Python Tutorial :- https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3
+Flask Tutorial  :- https://www.youtube.com/playlist?list=PLu0W_9lII9agAiWp6Y41ueUKx1VcTRxmf
+Flask Rest API :- https://www.youtube.com/watch?v=GMppyAPbLYk&t=9s
+Cassandra :- https://www.youtube.com/playlist?list=PLalrWAGybpB-L1PGA-NfFu2uiWHEsdscD
